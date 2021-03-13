@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-03-13T21:16:17.803Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="pjGUi1Cd_DxgfqCKPp2K" version="14.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-13T21:24:04.304Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="FHjf8ZrT87vSg7CNOcjZ" version="14.4.8" type="github">
   <diagram id="jrUoPo-l0NG1os7XEIIn" name="Page-1">
-    <mxGraphModel dx="826" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1653" dy="1643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="KyuKLni85TIHoHMPOAVg-1" value="Inter Process Communication (IPC)&lt;br&gt;so that event can also be sent from other machines." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="205" y="120" width="166.67" height="100" as="geometry" />
+          <mxGeometry x="71.67" y="87" width="210" height="100" as="geometry" />
         </mxCell>
         <mxCell id="KyuKLni85TIHoHMPOAVg-2" value="Communication:&lt;br&gt;async ZMQ&lt;br&gt;https://github.com/zeromq/azmq" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="50" y="7" width="253.33" height="80" as="geometry" />
@@ -31,8 +31,8 @@
         <mxCell id="KyuKLni85TIHoHMPOAVg-10" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;" edge="1" parent="1" source="KyuKLni85TIHoHMPOAVg-9" target="KyuKLni85TIHoHMPOAVg-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KyuKLni85TIHoHMPOAVg-9" value="list of available states" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="371.66999999999996" y="290" width="70" height="60" as="geometry" />
+        <mxCell id="KyuKLni85TIHoHMPOAVg-9" value="list of available states" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="360" y="295" width="81.67" height="50" as="geometry" />
         </mxCell>
         <mxCell id="KyuKLni85TIHoHMPOAVg-13" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=9;" edge="1" parent="1" source="KyuKLni85TIHoHMPOAVg-12" target="KyuKLni85TIHoHMPOAVg-3">
           <mxGeometry relative="1" as="geometry" />
@@ -40,8 +40,20 @@
         <mxCell id="KyuKLni85TIHoHMPOAVg-12" value="event B" style="ellipse;whiteSpace=wrap;html=1;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="627" y="87" width="60" height="33" as="geometry" />
         </mxCell>
-        <mxCell id="KyuKLni85TIHoHMPOAVg-14" value="pick event" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="250" width="210" height="60" as="geometry" />
+        <mxCell id="KyuKLni85TIHoHMPOAVg-14" value="When state starts, fire start event&lt;br&gt;when state finished, fire end event" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="250" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KyuKLni85TIHoHMPOAVg-15" value="list of available transitions from one state" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="360" y="350" width="81.67" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KyuKLni85TIHoHMPOAVg-16" value="Need a test where a couple of messages are sent and received." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;size=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="345.83" y="-20" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KyuKLni85TIHoHMPOAVg-17" value="Need to define what the valid message format for an event should be" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;size=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="320" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KyuKLni85TIHoHMPOAVg-18" value="An event has a name: &quot;e_event&quot;&lt;br&gt;internal events and external events.&lt;br&gt;we can start with simple strings." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="320" width="210" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
