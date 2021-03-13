@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-13T21:24:04.304Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="FHjf8ZrT87vSg7CNOcjZ" version="14.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-13T21:26:10.539Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="IPPxZT6uDCDzpmSNTmzm" version="14.4.8" type="github">
   <diagram id="jrUoPo-l0NG1os7XEIIn" name="Page-1">
     <mxGraphModel dx="1653" dy="1643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -52,7 +52,7 @@
         <mxCell id="KyuKLni85TIHoHMPOAVg-17" value="Need to define what the valid message format for an event should be" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;size=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-100" y="320" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="KyuKLni85TIHoHMPOAVg-18" value="An event has a name: &quot;e_event&quot;&lt;br&gt;internal events and external events.&lt;br&gt;we can start with simple strings." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="KyuKLni85TIHoHMPOAVg-18" value="An event has a name: &quot;e_event&quot;&lt;br&gt;internal events and external events.&lt;br&gt;we can start with simple strings.&lt;br&gt;they can even be hashed" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="10" y="320" width="210" height="60" as="geometry" />
         </mxCell>
       </root>
