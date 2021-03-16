@@ -1,3 +1,6 @@
 [submodule "third_party_libs/azmq"]
 	path = third_party_libs/azmq
 	url = git@github.com:zeromq/azmq.git
+[submodule "third_party_libs/googletest"]
+	path = third_party_libs/googletest
+	url = git@github.com:google/googletest.git
