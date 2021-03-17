@@ -10,10 +10,6 @@ namespace fsm {
 
 class Transition {
  public:
-  // Transition(const std::string& from_, const std::string& to_, const EventType& event)
-  //     : from(from_), to(to_), events({event}) {
-  //   updateTable();
-  // }
   Transition(const std::string& from_, const std::string& to_, const std::vector<EventType>& events_)
       : from(from_), to(to_), events(events_) {
     updateTable();
