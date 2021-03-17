@@ -1,5 +1,6 @@
 #pragma once
 
+#include <functional>
 #include <string>
 
 #include "constants.h"
@@ -11,8 +12,9 @@ namespace fsm {
 class State {
  public:
   State(const std::string& state_name_) : state_name(state_name_), event_sender(0) { initialize(); }
-  virtual void enter() = 0;
-  virtual void exit() = 0;
+
+  void setEntryFunction(const std::function<void()>& entryFunction) {}
+  void setExitFunction(const std::function<void()>& exitFunction) {}
 
  private:
   void initialize() { current_event = ""; }
@@ -37,6 +39,8 @@ class State {
   const std::string state_name;
   EventType current_event;
   EventSender event_sender;
+  std::function<void()> enter;
+  std::function<void()> exit;
 };
 
 }  // namespace fsm
