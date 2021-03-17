@@ -10,10 +10,13 @@
 
 namespace fsm {
 
+// Right now the event store doesn't implement any form of priority to the queued messages.
+// This could be a future improvement.
 class EventStore {
  public:
   void send(const EventType& event) {
     // What is used for transportation can be different from what type is used for internal messages.
+    // For example if the events are serialized.
     // Here they are the same. Hence no conversion is required.
     std::scoped_lock lock(mutex);
     msg_queue.push(event);
@@ -38,6 +41,17 @@ class EventStore {
       p.pop();
     }
     std::cout << "]\n";
+  }
+
+  static std::vector<MsgType> toVector() {
+    auto p = msg_queue;
+    std::vector<MsgType> vec(p.size());
+    std::size_t size = p.size();
+    for (unsigned int i = 0; i < size; ++i) {
+      vec.at(i) = p.front();
+      p.pop();
+    }
+    return vec;
   }
 
  private:
@@ -82,20 +96,3 @@ class EventReceiver {
   EventStore store;
 };
 }  // namespace fsm
-
-void send_event(fsm::EventSender& sender, const fsm::EventType& msg) { sender.send(msg); }
-
-int main() {
-  std::vector<std::thread> threads;
-  std::vector<fsm::EventSender> senders;
-  for (int i = 0; i < 5; ++i) {
-    auto sender = senders.emplace_back(i);
-    threads.emplace_back(send_event, std::ref(sender), std::to_string(i));
-  }
-  std::this_thread::sleep_for(std::chrono::milliseconds(10));
-  fsm::EventStore::print();
-  for (auto& thread : threads) {
-    thread.join();
-  }
-  return 0;
-}
