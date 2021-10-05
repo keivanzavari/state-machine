@@ -15,11 +15,13 @@ class State;
 
 class StatesStore {
  public:
-  static void addState(State* state);
-  
+  static void addState(State* state) { states[state->getName()] = state; }
+
  private:
   static std::unordered_map<std::string, State*> states;
 };
+
+std::unordered_map<std::string, State*> StatesStore::states{};
 class State {
  public:
   State(std::string state_name_) : state_name(std::move(state_name_)), event_sender(0) { initialize(); }

@@ -30,8 +30,12 @@ add_test( transmitters_test transmitters_test)
 target_link_libraries(transmitters_test gtest gtest_main gmock_main)
 set_property(TARGET transmitters_test PROPERTY CXX_STANDARD 20)
 
-
 add_executable( transitions_test test/transitions_test.cc )
 add_test( transitions_test transitions_test)
 target_link_libraries(transitions_test gtest gtest_main gmock_main)
 set_property(TARGET transitions_test PROPERTY CXX_STANDARD 20)
+
+add_executable( states_test test/states_test.cc )
+add_test( states_test states_test)
+target_link_libraries(states_test gtest gtest_main gmock_main)
+set_property(TARGET states_test PROPERTY CXX_STANDARD 20)
