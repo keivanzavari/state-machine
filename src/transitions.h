@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FSM_INCLUDE_TRANSITIONS_H_
+#define FSM_INCLUDE_TRANSITIONS_H_
 
 #include <string>
 #include <unordered_map>
@@ -43,3 +44,5 @@ class Transition {
 TransitionTable Transition::table{};
 
 }  // namespace fsm
+
+#endif  // FSM_INCLUDE_TRANSITIONS_H_

@@ -1,4 +1,5 @@
-// #pragma once
+#ifndef FSM_INCLUDE_TRANSMITTERS_H_
+#define FSM_INCLUDE_TRANSMITTERS_H_
 
 #include <iostream>
 #include <mutex>
@@ -96,3 +97,5 @@ class EventReceiver {
   EventStore store;
 };
 }  // namespace fsm
+
+#endif  // FSM_INCLUDE_TRANSMITTERS_H_
